@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corazón latiendo</title>
+
+</head>
+
+<body>
+
+<style>
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(lunamorada.jpg);
+    background-size: cover;
+}
+
+.heart{
+
+height: 150px;
+
+width: 150px;
+
+background-color: red;
+
+position: relative;
+
+transform: rotate(45deg);
+
+box-shadow: 20px 20px 150px red;
+
+animation: palpitar 0.5s linear infinite alternate;
+
+}
+
+
+
+.contenido{
+
+z-index: 99999;
+
+margin-top: -90px;
+
+margin-left: -0%;
+
+animation: palpitar_texto 0.5s linear infinite alternate;
+
+display: flex;
+
+position: absolute;
+
+text-align: center;
+
+color: white;
+
+}
+
+
+@keyframes palpitar {
+
+0%{transform: rotate(45deg) scale(1.10);}
+
+50%{transform: rotate(45deg) scale(1.0);}
+
+100%{transform: rotate(45deg) scale(0.8);}
+
+
+
+}
+
+@keyframes palpitar_texto {
+
+0%{transform: scale(1.10);}
+
+50%{transform: scale(1.0);}
+
+100%{transform: scale(0.8);}
+
+
+
+}
+
+
+
+.heart::before{
+
+    content: "";
+
+    position: absolute;
+
+    height: 150px;
+
+    width: 150px;
+
+    background-color: red;
+
+    right: 49%;
+
+    border-radius: 50%;
+
+    box-shadow: 20px 20px 150px red;
+
+}
+
+
+
+.heart::after{
+
+    content: "";
+
+    position: absolute;
+
+    height: 130px;
+
+    width: 150px;
+
+    background-color: red;
+
+    top: -69px;
+
+    border-radius: 50% ;
+
+    box-shadow: 20px 20px 150px red;
+
+
+}
+
+
+
+
+</style>
+
+
+<div class="heart"></div> 
+
+
+<div class="contenido"><h1>Corazón</h1></div>
+
+</body>
+
+</html>
